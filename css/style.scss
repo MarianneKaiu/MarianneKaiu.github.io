@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "font1";
+    src: url(../css/fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: "font2";
+    src: url(../css/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Medium.ttf);
+}
+
+
+$font1: "font1", sans-serif;
+$font2: "font2", sans-serif;
+
+$color1: teal;
+$color2: orange;
+$color3: grey;
+$color4: rgba(52, 178, 178, 0.771);
+
+body {
+    box-sizing: border-box;
+    max-width: 98vw;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: none;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: $font2;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: $font1;
+}
+
+
+
+nav {
+    display: flex;
+    background-color: $color1;
+    position: relative;
+    top: -100px;
+    div {
+        width: 50%;
+        
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                padding: 1em;
+                width: 20%;
+                border: 1px solid black;
+                background-color: $color4;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+.hero {
+    @include center;
+    background: url(../assets/banniere.png) center/cover repeat;
+    flex-direction: column;
+    height: 70vh;
+    margin-bottom: 15vh;
+    >div {
+        background-color: $color1;
+        border-radius: 10px;
+    }
+    h1, h2 {
+        @include center;
+        padding: 0.5rem 2rem;
+        color: $color4;
+        text-shadow: 1px 0 0 rgba(203, 203, 203, 0.9);
+    }
+}
+#cursor {
+    width: 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#section-1 {
+    text-align: center;
+    margin: 20vh 0;
+    >div {
+        @include center;
+
+        img {
+            width: 15em;
+            border-radius: 50%;
+        }
+    }
+}
+
+#section-2 {
+
+    >div {
+        @include center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .card {
+            width: 20%;
+            height: 21em;
+            margin: 2em;
+            border: 1.5px solid rgba(119, 119, 119, 0.826);
+            box-shadow: 2px 2px 2px rgba(119, 119, 119, 0.826);
+            background-color: whitesmoke;
+            border-radius: 10px;
+            position: relative;
+
+            img {
+                width: 200px;
+                height: 200px;
+                border: 1px solid rgba(119, 119, 119, 0.826);
+                box-shadow: inset -1px -1px 2px rgba(119, 119, 119, 0.826);
+                background-color: white;
+                position: absolute;
+                top: 2em;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 100;
+            }
+            .card-title {
+                position: absolute;
+                bottom: 3em;
+                margin-left: 3em;
+                p {
+                    text-transform: uppercase;
+                    font-family: $font1;
+                    opacity: 1;
+                }
+            }
+            .modal {
+                opacity: 0;
+                background-color: rgba(17, 17, 17, 0.94);
+                height: 21em;
+                border-radius: 10px;
+                position: absolute;
+                z-index: 120;
+                transition: 1s ease-in-out;
+
+                .title {
+                    text-transform: uppercase;
+                    text-align: center;
+                    line-height: 2em;
+                }
+
+                p {
+                    text-align: center;
+                    padding: 12em 1em 0;
+                    color: whitesmoke;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
+
+#section-3 {
+    .carroussel {
+        margin: 0 auto;
+    }
+    img {
+        width: 17.5em;
+    }
+
+}
+
+#section-4 {
+
+    table {
+        width: 80vw;
+        margin: auto;
+        border: 2px solid $color1;
+        border-collapse: collapse;
+        text-align: center;
+        th {
+            height: 3em;
+        }
+        tr{
+            border: 2px solid $color1;
+            height: 3em;
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+}
+footer {
+    img {
+        width: 200px;
+    }
+}

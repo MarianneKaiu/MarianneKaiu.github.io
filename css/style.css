@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "font1";
+  src: url(../css/fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(../css/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Medium.ttf);
+}
+body {
+  box-sizing: border-box;
+  max-width: 98vw;
+  margin-left: 1em;
+  margin-right: 1em;
+  cursor: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "font2", sans-serif;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-family: "font1", sans-serif;
+}
+
+nav {
+  display: flex;
+  background-color: teal;
+  position: relative;
+  top: -100px;
+}
+nav div {
+  width: 50%;
+}
+nav div ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav div ul li {
+  padding: 1em;
+  width: 20%;
+  border: 1px solid black;
+  background-color: rgba(52, 178, 178, 0.771);
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/banniere.png) center/cover repeat;
+  flex-direction: column;
+  height: 70vh;
+  margin-bottom: 15vh;
+}
+.hero > div {
+  background-color: teal;
+  border-radius: 10px;
+}
+.hero h1, .hero h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  color: rgba(52, 178, 178, 0.771);
+  text-shadow: 1px 0 0 rgba(203, 203, 203, 0.9);
+}
+#section-1 {
+  text-align: center;
+  margin: 20vh 0;
+}
+#section-1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-1 > div img {
+  width: 15em;
+  border-radius: 50%;
+}
+
+#section-2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#section-2 > div .card {
+  width: 20%;
+  height: 21em;
+  margin: 2em;
+  border: 1.5px solid rgba(119, 119, 119, 0.826);
+  box-shadow: 2px 2px 2px rgba(119, 119, 119, 0.826);
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+}
+#section-2 > div .card img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(119, 119, 119, 0.826);
+  box-shadow: inset -1px -1px 2px rgba(119, 119, 119, 0.826);
+  background-color: white;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+#section-2 > div .card .card-title {
+  position: absolute;
+  bottom: 3em;
+  margin-left: 3em;
+}
+#section-2 > div .card .card-title p {
+  text-transform: uppercase;
+  font-family: "font1", sans-serif;
+  opacity: 1;
+}
+#section-2 > div .card .modal {
+  opacity: 0;
+  background-color: rgba(17, 17, 17, 0.94);
+  height: 21em;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 120;
+  transition: 1s ease-in-out;
+}
+#section-2 > div .card .modal .title {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+}
+#section-2 > div .card .modal p {
+  text-align: center;
+  padding: 12em 1em 0;
+  color: whitesmoke;
+}
+#section-2 > div .card .modal:hover {
+  opacity: 1;
+}
+
+#section-3 .carroussel {
+  margin: 0 auto;
+}
+#section-3 img {
+  width: 17.5em;
+}
+
+#section-4 table {
+  width: 80vw;
+  margin: auto;
+  border: 2px solid teal;
+  border-collapse: collapse;
+  text-align: center;
+}
+#section-4 table th {
+  height: 3em;
+}
+#section-4 table tr {
+  border: 2px solid teal;
+  height: 3em;
+}
+#section-4 table tr img {
+  width: 30px;
+}
+
+footer img {
+  width: 200px;
+}/*# sourceMappingURL=style.css.map */
