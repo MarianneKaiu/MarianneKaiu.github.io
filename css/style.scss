@@ -44,7 +44,11 @@ h1, h2, h3 {
     font-family: $font1;
 }
 
-
+#cursor {
+    width: 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
 
 nav {
     display: flex;
