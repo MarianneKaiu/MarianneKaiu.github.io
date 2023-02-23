@@ -51,12 +51,11 @@ h1, h2, h3 {
 }
 
 nav {
-    display: flex;
+
     background-color: $color1;
-    position: relative;
+    position: fixed;
     top: -100px;
     div {
-        width: 50%;
         
         ul {
             display: flex;
@@ -79,7 +78,7 @@ nav {
     background: url(../assets/banniere.png) center/cover repeat;
     flex-direction: column;
     height: 70vh;
-    margin-bottom: 15vh;
+    top: 10vh;
     >div {
         background-color: $color1;
         border-radius: 10px;

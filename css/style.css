@@ -35,13 +35,9 @@ h1, h2, h3 {
 }
 
 nav {
-  display: flex;
   background-color: teal;
-  position: relative;
+  position: fixed;
   top: -100px;
-}
-nav div {
-  width: 50%;
 }
 nav div ul {
   display: flex;
@@ -62,7 +58,7 @@ nav div ul li {
   background: url(../assets/banniere.png) center/cover repeat;
   flex-direction: column;
   height: 70vh;
-  margin-bottom: 15vh;
+  top: 10vh;
 }
 .hero > div {
   background-color: teal;
