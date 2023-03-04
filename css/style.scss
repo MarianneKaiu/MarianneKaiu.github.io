@@ -19,8 +19,8 @@ $color4: rgba(52, 178, 178, 0.771);
 body {
     box-sizing: border-box;
     max-width: 98vw;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0;
+    margin-right: 0;
     cursor: none;
 }
 
@@ -45,16 +45,19 @@ h1, h2, h3 {
 }
 
 #cursor {
-    width: 2em;
+    width: 2rem;
     position: absolute;
     transform: translate(-50%, -50%);
+    z-index: 99;
 }
-
 nav {
 
     background-color: $color1;
     position: fixed;
-    top: -100px;
+    display: block;
+    width: 100%;
+    top: -400px;
+    z-index: 98;
     div {
         
         ul {
@@ -78,7 +81,7 @@ nav {
     background: url(../assets/banniere.png) center/cover repeat;
     flex-direction: column;
     height: 70vh;
-    top: 10vh;
+    margin-top: 15vh;
     >div {
         background-color: $color1;
         border-radius: 10px;
@@ -90,11 +93,7 @@ nav {
         text-shadow: 1px 0 0 rgba(203, 203, 203, 0.9);
     }
 }
-#cursor {
-    width: 2em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
+
 #section-1 {
     text-align: center;
     margin: 20vh 0;
@@ -117,7 +116,7 @@ nav {
 
         .card {
             width: 20%;
-            height: 21em;
+            height: 21rem;
             margin: 2em;
             border: 1.5px solid rgba(119, 119, 119, 0.826);
             box-shadow: 2px 2px 2px rgba(119, 119, 119, 0.826);
@@ -126,8 +125,8 @@ nav {
             position: relative;
 
             img {
-                width: 200px;
-                height: 200px;
+                width: 80%;
+                height: 60%;
                 border: 1px solid rgba(119, 119, 119, 0.826);
                 box-shadow: inset -1px -1px 2px rgba(119, 119, 119, 0.826);
                 background-color: white;
@@ -135,7 +134,7 @@ nav {
                 top: 2em;
                 left: 50%;
                 transform: translateX(-50%);
-                z-index: 100;
+                z-index: 96;
             }
             .card-title {
                 position: absolute;
@@ -153,7 +152,7 @@ nav {
                 height: 21em;
                 border-radius: 10px;
                 position: absolute;
-                z-index: 120;
+                z-index: 97;
                 transition: 1s ease-in-out;
 
                 .title {
@@ -164,7 +163,7 @@ nav {
 
                 p {
                     text-align: center;
-                    padding: 12em 1em 0;
+                    padding: 2em 1em 0;
                     color: whitesmoke;
                 }
                 &:hover {
