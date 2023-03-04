@@ -29,6 +29,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+@mixin img {
+    width: 95%;
+    border-radius: 50%;
+    margin: 2px 0;
+    border: 2px solid grey;
+    z-index: 100;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 
 li {
     list-style: none;
@@ -207,7 +217,59 @@ nav {
     }
 }
 footer {
-    img {
-        width: 200px;
+    display: flex;
+    div {
+        justify-content: center;
+        width: 50%;
+    }
+    .copains {
+        div{
+    display: grid;
+    width: 100%; 
+    height: 100%;
+
+    grid-template-areas: 
+    "mo mo le"
+    "mo mo mw"
+    "mi ma po";
+            align-content: center;
+    #photo-mo {
+        grid-area: mo;
+        img {
+            @include img;
+        }
+    }
+    #photo-le {
+        grid-area: le;
+        img {
+            @include img;
+            
+        }
+    }
+    #photo-po {
+        grid-area: po;
+        img {
+            @include img;
+        }
+    }
+    #photo-mi {
+        grid-area: mi;
+        img {
+            @include img;
+        }
+    }
+    #photo-ma {
+        grid-area: ma;
+        img {
+            @include img;
+        }
+    }
+    #photo-mw {
+        grid-area: mw;
+        img {
+            @include img;
+        }
+    }
     }
 }
+    }
