@@ -32,7 +32,7 @@ h1, h2, h3 {
   width: 2rem;
   position: absolute;
   transform: translate(-50%, -50%);
-  z-index: 99;
+  z-index: auto;
 }
 
 nav {
@@ -41,7 +41,9 @@ nav {
   display: block;
   width: 100%;
   top: -400px;
-  z-index: 98;
+  z-index: auto;
+  opacity: 0;
+  transition: 1s ease-in-out;
 }
 nav div ul {
   display: flex;
@@ -100,6 +102,7 @@ nav div ul li {
 }
 #section-2 > div .card {
   width: 20%;
+  min-width: 250px;
   height: 21rem;
   margin: 2em;
   border: 1.5px solid rgba(119, 119, 119, 0.826);
@@ -118,7 +121,6 @@ nav div ul li {
   top: 2em;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 96;
 }
 #section-2 > div .card .card-title {
   position: absolute;
@@ -136,7 +138,7 @@ nav div ul li {
   height: 21em;
   border-radius: 10px;
   position: absolute;
-  z-index: 97;
+  z-index: auto;
   transition: 1s ease-in-out;
 }
 #section-2 > div .card .modal .title {
@@ -200,10 +202,6 @@ footer .copains div #photo-mo img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
-}
-footer .copains div #photo-mo img:hover {
-  transform: scale(1.1);
 }
 footer .copains div #photo-le {
   grid-area: le;
@@ -213,10 +211,6 @@ footer .copains div #photo-le img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
-}
-footer .copains div #photo-le img:hover {
-  transform: scale(1.1);
 }
 footer .copains div #photo-po {
   grid-area: po;
@@ -226,10 +220,6 @@ footer .copains div #photo-po img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
-}
-footer .copains div #photo-po img:hover {
-  transform: scale(1.1);
 }
 footer .copains div #photo-mi {
   grid-area: mi;
@@ -239,10 +229,6 @@ footer .copains div #photo-mi img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
-}
-footer .copains div #photo-mi img:hover {
-  transform: scale(1.1);
 }
 footer .copains div #photo-ma {
   grid-area: ma;
@@ -252,10 +238,6 @@ footer .copains div #photo-ma img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
-}
-footer .copains div #photo-ma img:hover {
-  transform: scale(1.1);
 }
 footer .copains div #photo-mw {
   grid-area: mw;
@@ -265,8 +247,15 @@ footer .copains div #photo-mw img {
   border-radius: 50%;
   margin: 2px 0;
   border: 2px solid grey;
-  z-index: 100;
 }
-footer .copains div #photo-mw img:hover {
-  transform: scale(1.1);
+
+@media screen and (max-width: 850px) {
+  #section-1 > div {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+  }
+  #section-1 > div {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */
